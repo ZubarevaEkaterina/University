@@ -28,7 +28,17 @@ namespace University
         private void button1_Click(object sender, EventArgs e)
         {
             User check = new User();
-            check.Authorize(login, password);
+            try
+            {
+                check.Authorize(login, password);
+            }
+            catch (Exception)
+            {
+
+              var result = MessageBox.Show("Неправильное имя или пароль", "", MessageBoxButtons.OK);
+                return;
+            }
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -41,5 +51,7 @@ namespace University
         {
             password = textBox2.Text;
         }
+
+       
     }
 }
