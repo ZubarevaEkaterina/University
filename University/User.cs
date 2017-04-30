@@ -12,18 +12,18 @@ namespace University
         public void Authorize(string login, string password)
         { 
             Connection database = new Connection();
-            string otv = string.Empty;
+            string status = string.Empty;
   database.QueryExecuteReader("SELECT User.status from [User] WHERE User.Login = '" + login + "' and User.Password = '" + password + "';");
 
             while (database.reader.Read())
             {
-                otv = database.reader.GetString(0);
+                status = database.reader.GetString(0);
             }
 
             database.reader.Close();
            database.CloseConnection();
            
-                switch (otv)
+                switch (status)
                 {
                     case "Админ":
                         Admin_form adm = new Admin_form();
