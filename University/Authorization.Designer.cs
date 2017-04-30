@@ -1,6 +1,6 @@
 ﻿namespace University
 {
-    partial class Form1
+    partial class Authorization
     {
         /// <summary>
         /// Обязательная переменная конструктора.
