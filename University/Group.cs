@@ -23,11 +23,16 @@ namespace University
             }
             database.reader.Close();
             database.CloseConnection();
+
+            
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            //User person = new User();
+            var form = new Schedule_form(comboBox1.Text);
+            form.ShowDialog();
         }
     }
        

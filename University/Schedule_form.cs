@@ -17,6 +17,9 @@ namespace University
             InitializeComponent();
         }
 
+       public Schedule_form(string group)
+        { }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

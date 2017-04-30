@@ -7,12 +7,14 @@ using System.Data.OleDb;
 
 namespace University
 {
+    
     class User
     {
+        public string status;
         public void Authorize(string login, string password)
         { 
             Connection database = new Connection();
-            string status = string.Empty;
+            
   database.QueryExecuteReader("SELECT User.status from [User] WHERE User.Login = '" + login + "' and User.Password = '" + password + "';");
 
             while (database.reader.Read())
