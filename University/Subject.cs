@@ -8,8 +8,8 @@ namespace University
 {
     class Subject
     {
-        string name;
-        string teacher_name;
-        string group;
+       public string name;
+     
+     
     }
 }

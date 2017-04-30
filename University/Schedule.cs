@@ -8,8 +8,9 @@ namespace University
 {
     class Schedule
     {
-        public String[] Week;
+        public string[] Week;
         public string groupName;
+
 
 
     }

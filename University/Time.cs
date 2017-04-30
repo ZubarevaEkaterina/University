@@ -8,8 +8,7 @@ namespace University
 {
     class Time
     {
-        int number;
-        string begin;
-        string end;
+        public int number;
+     
     }
 }

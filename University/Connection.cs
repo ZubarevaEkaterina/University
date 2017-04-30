@@ -9,11 +9,12 @@ namespace University
 {
     class Connection
     {
-        public OleDbConnection connection = new OleDbConnection(@"provider=Microsoft.ACE.OLEDB.12.0;Data Source= c:\users\user\documents\visual studio 2015\Projects\University\University\Schedule.accdb");
+       // public OleDbConnection connection = new OleDbConnection(@"provider=Microsoft.ACE.OLEDB.12.0;Data Source= c:\users\user\documents\visual studio 2015\Projects\University\University\Schedule.accdb");
+        public OleDbConnection connection = new OleDbConnection(University.Properties.Settings.Default.Schedule);
         public OleDbCommand query = new OleDbCommand();
         public OleDbDataReader reader;
-        
 
+        
         public void QueryExecuteReader(string textCommand)
         {
             

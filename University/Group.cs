@@ -31,8 +31,10 @@ namespace University
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //User person = new User();
-            var form = new Schedule_form(comboBox1.Text);
-            form.ShowDialog();
+         //  var form = new Schedule_form(comboBox1.Text);
+         //   form.ShowDialog();
+         Lesson les = new Lesson();
+            les.GetLesson(comboBox1.Text);
         }
     }
        
