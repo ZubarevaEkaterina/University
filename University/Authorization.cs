@@ -28,17 +28,17 @@ namespace University
         private void button1_Click(object sender, EventArgs e)
         {
             User check = new User();
-          //  try
-         //   {
+           try
+           {
                 check.Authorize(login, password);
             
-            //  }
-            // catch (Exception)
-            // {
+             }
+            catch (Exception)
+           {
 
-            // var result = MessageBox.Show("Неправильное имя или пароль", "", MessageBoxButtons.OK);
-            //     return;
-            // }
+             var result = MessageBox.Show("Неправильное имя или пароль", "", MessageBoxButtons.OK);
+                 return;
+             }
 
         }
 
