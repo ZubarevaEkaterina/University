@@ -31,7 +31,6 @@ namespace University
           //  try
          //   {
                 check.Authorize(login, password);
-            this.Hide();
             
             //  }
             // catch (Exception)

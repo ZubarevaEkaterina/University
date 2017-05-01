@@ -42,20 +42,14 @@ namespace University
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text!= "" & textBox2.Text != "" & comboBox1.Text != "")
+            if (login != "" & password != "" & role != "")
             {
-
-            
-            Connection database = new Connection();
-/*
-                database. connection.Open();
-                database. query.Connection = database.connection;
-                database.query.CommandText = "INSERT INTO [User] ( [Login], [Password], [status] ) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + comboBox1.Text + "');";
-                database.query.ExecuteNonQuery();
-                */
-                database.QueryExecuteNon("INSERT INTO [User] ( Login, [Password], status )VALUES('" + textBox1.Text.ToString() + "', '" + textBox2.Text.ToString() + "', '" + comboBox1.Text.ToString() + "');");
-            database.CloseConnection();
-        }
+                
+                Connection database = new Connection();
+                database.QueryExecuteNon("INSERT INTO [User] ( Login, [Password], status )VALUES('" + login + "', '" + password + "', '" + role + "');");
+                database.CloseConnection();
+                
+            }  
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -63,12 +57,7 @@ namespace University
             Connection database = new Connection();
             database.QueryExecuteNon("delete from [User] where login = '" + login + "';");
             database.CloseConnection();
-            MessageBox.Show("ре");
-            
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
+         
 
         }
     }
