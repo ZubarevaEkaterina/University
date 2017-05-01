@@ -17,7 +17,7 @@ namespace University
         
         public void QueryExecuteReader(string textCommand)
         {
-            
+            query.Connection = connection;
             connection.Open();
             query.CommandText = textCommand;
             query.Connection = connection;
@@ -30,9 +30,10 @@ namespace University
         public void QueryExecuteNon(string textCommand)
         {
             connection.Open();
-            query.CommandText = textCommand;
             query.Connection = connection;
+            query.CommandText = textCommand;
             query.ExecuteNonQuery();
+          
         }
 
 

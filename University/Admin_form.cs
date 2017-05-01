@@ -32,5 +32,11 @@ namespace University
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Create st = new Create();
+            st.ShowDialog();
+        }
     }
 }
