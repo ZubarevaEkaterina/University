@@ -41,20 +41,22 @@ namespace University
             dataGridView1.Columns[5].HeaderCell.Value = "Суббота";
             dataGridView1.Columns[6].HeaderCell.Value = "Воскресение";
             
-    }
+           dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+           
+
+        }
 
 
 
-             public void Schedule_form_v (Lesson.les [] les)
+        public void Schedule_form_v(Lesson les, int count)
           {
-            
-            
-            
 
-            for (int i = 0; i < les.Length; i++)
+
+            for (int i = 0; i < count; i++)
             {
+
+                dataGridView1.Rows[(les.time[i]) - 1].Cells[les.day[i] - 1].Value = les.subject[i] + ", "  + les.cabinet[i] + ", " + les.teacher[i] + ", " + les.type[i];
                 
-                dataGridView1.Rows[(les[i].time)-1].Cells[les[i].day-1].Value = les[i].subject + "" + les[i].type;
             }
             
                 
