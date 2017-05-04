@@ -12,17 +12,26 @@ namespace University
         public string select_command(string table, string columns, string condition)
         {
             Connection database = new Connection();
-            string status = "";
+            string result = "";
             database.QueryExecuteReader("SELECT "+ columns+ " from ["+ table +"]" + condition + ";");
 
             while (database.reader.Read())
             {
-              status = database.reader.GetString(0);
+              result= database.reader.GetString(0);
             }
             
             database.reader.Close();
             database.CloseConnection();
-            return status;
+            return result;
+        }
+
+
+        public void insert_command(string table, string columns, string condition)
+        {
+
+            Connection database = new Connection();
+            database.QueryExecuteNon("INSERT INTO [" + table + "] (" + columns +")VALUES(" + condition + ");");
+            database.CloseConnection();
         }
     }
 }

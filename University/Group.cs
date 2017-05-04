@@ -9,11 +9,6 @@ namespace University
     class Group
     {
         public string group_name;
-
-        public void choose_group (string group)
-        {
-
-
-        }
+        
     }
 }

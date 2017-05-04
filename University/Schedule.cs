@@ -9,7 +9,7 @@ namespace University
    class Schedule
     {
         public Weekday[] day;
-
+     
         public void GetSchedule(string group)
 
         {
@@ -27,7 +27,7 @@ namespace University
             var schedule = new Schedule()
             {
                 day = new Weekday[count]
-
+               
 
             };
            
@@ -56,6 +56,6 @@ namespace University
 
 
             Schedule_form sc = new Schedule_form();
-            sc.Schedule_form_v(schedule, count);
+            sc.Schedule_form_v(schedule, count, group);
             sc.ShowDialog();
         } } }

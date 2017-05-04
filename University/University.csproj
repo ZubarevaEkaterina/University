@@ -82,6 +82,7 @@
     <Compile Include="Create.Designer.cs">
       <DependentUpon>Create.cs</DependentUpon>
     </Compile>
+    <Compile Include="Create_user.cs" />
     <Compile Include="Database_query.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="Group_form.cs">
@@ -98,6 +99,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Schedule_form.cs">
       <SubType>Form</SubType>
@@ -158,14 +160,17 @@
     </Compile>
     <None Include="ScheduleDataSet.xsc">
       <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ScheduleDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ScheduleDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ScheduleDataSet.xss">
       <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>

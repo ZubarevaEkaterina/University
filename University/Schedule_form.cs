@@ -48,7 +48,7 @@ namespace University
 
 
 
-        public void Schedule_form_v(Schedule sch, int count)
+        public void Schedule_form_v(Schedule sch, int count, string gr)
           {
 
 
@@ -58,7 +58,8 @@ namespace University
                 dataGridView1.Rows[(sch.day[i].lesson.time.time) - 1].Cells[sch.day[i].day - 1].Value = sch.day[i].lesson.subject.subject + ", "  + sch.day[i].lesson.cabinet.number + ", " + sch.day[i].lesson.teacher.name + ", " + sch.day[i].lesson.type.type;
                 
             }
-            
+
+            label1.Text = "Расписание для " + gr;
                 
             
     }
