@@ -19,7 +19,8 @@ namespace University
             InitializeComponent();
             string[] s = { "Студент", "Преподаватель", "Админ" };
             comboBox1.DataSource = s;
-            
+           
+
 
         }
 
@@ -46,12 +47,12 @@ namespace University
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {/*
-            Connection database = new Connection();
-            database.QueryExecuteNon("delete from [User] where login = '" + login + "';");
-            database.CloseConnection();
-         */
-
+        {
+            Create_user cr = new Create_user();
+            cr.delete(textBox1.Text, textBox2.Text, comboBox1.Text);
         }
+
+        public void Message(string text)
+        { var res = MessageBox.Show(text); }
     }
 }

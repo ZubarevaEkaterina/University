@@ -26,6 +26,7 @@ namespace University
             }
             database.reader.Close();
             database.CloseConnection();
+            
 
             
             
@@ -37,6 +38,21 @@ namespace University
          Schedule sch = new Schedule();
             sch.GetSchedule(comboBox1.Text);
         }
+
+        public void show_sch()
+        {
+            Schedule sch = new Schedule();
+            sch.GetSchedule(comboBox1.Text);
+        }
+
+        public void create_new()
+        {
+            Add_form sch = new Add_form();
+            sch.Show();
+            Add_lesson les = new Add_lesson();
+            les.Create_les(comboBox1.Text);
+        }
+
     }
        
 

@@ -50,15 +50,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Выберите группу";
             // 
-            // Group
+            // Group_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
-            this.Name = "Group";
-            this.Text = "Group";
+            this.Name = "Group_form";
+            this.Text = "Выбор группы";
             this.ResumeLayout(false);
             this.PerformLayout();
 

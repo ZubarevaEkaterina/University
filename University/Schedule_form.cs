@@ -22,7 +22,7 @@ namespace University
             StartPosition = FormStartPosition.CenterScreen;
             dataGridView1.RowCount = 8;
             dataGridView1.ColumnCount = 7;
-
+           
             
             DataGridViewRow row = dataGridView1.Rows[0];
             for (int i = 0; i < 7; i++)
@@ -66,7 +66,13 @@ namespace University
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
 
+        private void Добавить_Click(object sender, EventArgs e)
+        {
+           Group_form add = new Group_form();
+            add.Show();
         }
     }
 }

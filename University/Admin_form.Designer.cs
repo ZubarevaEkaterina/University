@@ -34,7 +34,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(56, 74);
+            this.button1.Location = new System.Drawing.Point(12, 46);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 23);
             this.button1.TabIndex = 0;
@@ -44,7 +44,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(56, 189);
+            this.button4.Location = new System.Drawing.Point(12, 93);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(158, 23);
             this.button4.TabIndex = 3;
@@ -56,11 +56,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(390, 140);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Name = "Admin_form";
-            this.Text = "Admin_form";
+            this.Text = "Вы зашли под администратором";
             this.ResumeLayout(false);
 
         }

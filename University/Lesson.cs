@@ -10,8 +10,7 @@ namespace University
 {
      class Lesson
     {
-
-
+       
         public Time time;
         public Subject subject;
         public Cabinet cabinet;

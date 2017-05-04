@@ -135,7 +135,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Create";
-            this.Text = "Create";
+            this.Text = "Создание пользователя";
             this.ResumeLayout(false);
             this.PerformLayout();
 

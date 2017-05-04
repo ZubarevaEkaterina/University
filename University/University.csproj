@@ -61,6 +61,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>Add_form.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_lesson.cs" />
     <Compile Include="Admin_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,7 +92,6 @@
     </Compile>
     <Compile Include="Create_user.cs" />
     <Compile Include="Database_query.cs" />
-    <Compile Include="Group.cs" />
     <Compile Include="Group_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,7 +106,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Schedule_form.cs">
       <SubType>Form</SubType>
@@ -125,6 +131,9 @@
     <Compile Include="Type.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Weekday.cs" />
+    <EmbeddedResource Include="Add_form.resx">
+      <DependentUpon>Add_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_form.resx">
       <DependentUpon>Admin_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,26 +169,21 @@
     </Compile>
     <None Include="ScheduleDataSet.xsc">
       <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ScheduleDataSet.xsd">
+    <Content Include="ScheduleDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ScheduleDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
     <None Include="ScheduleDataSet.xss">
       <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Schedule.accdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Schedule.accdb" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

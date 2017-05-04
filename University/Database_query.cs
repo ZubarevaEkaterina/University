@@ -8,7 +8,7 @@ namespace University
 {
     class Database_query
     {
-
+        
         public string select_command(string table, string columns, string condition)
         {
             Connection database = new Connection();
@@ -32,6 +32,17 @@ namespace University
             Connection database = new Connection();
             database.QueryExecuteNon("INSERT INTO [" + table + "] (" + columns +")VALUES(" + condition + ");");
             database.CloseConnection();
+        }
+
+
+        public void delete_command(string table, string condition)
+        {
+
+            Connection database = new Connection();
+            database.QueryExecuteNon("delete from ["+ table + "] where " + condition + ";");
+            database.CloseConnection();
+
+            
         }
     }
 }

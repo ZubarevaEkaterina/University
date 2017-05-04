@@ -8,25 +8,45 @@ namespace University
 {
     class Create_user
     {
-        private User user;
+        public Create cr = new Create();
 
         public void create(string login, string password, string role)
 
         {
-            user = new User();
+          
 
             if (login != "" & password != "" & role != "")
             {
                 Database_query query = new  Database_query();
                 query.insert_command("User", "Login, [Password], status", "'" + login + "', '" + password + "', '" + role + "'");
-/*
-                Connection database = new Connection();
-                database.QueryExecuteNon("INSERT INTO [User] ( Login, [Password], status )VALUES('" + login + "', '" + password + "', '" + role + "');");
-                database.CloseConnection();*/
 
+                cr.Message("Пользователь создан");
             }
+           else cr.Message("Заполнены не все поля");
+
+
 
         }
 
+
+        public void delete(string login, string password, string role)
+
+        {
+
+            if (login != "" )
+            {
+
+                Database_query query = new Database_query();
+                query.delete_command("User", "login = '" + login + "'");
+            }
+            else
+            cr.Message("Введите логин пользователя");
+
+
+
+
+
         }
+
+    }
     }
