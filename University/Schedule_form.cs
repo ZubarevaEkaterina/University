@@ -55,7 +55,7 @@ namespace University
             for (int i = 0; i < count; i++)
             {
 
-                dataGridView1.Rows[(les.time[i]) - 1].Cells[les.day[i] - 1].Value = les.subject[i] + ", "  + les.cabinet[i] + ", " + les.teacher[i] + ", " + les.type[i];
+                dataGridView1.Rows[(les.time[i]) - 1].Cells[les.day[i] - 1].Value = les.subject[i] + ", "  + les.cabinet[i] + ", " + les.teacher[i].name + ", " + les.type[i];
                 
             }
             

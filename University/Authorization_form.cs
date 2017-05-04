@@ -22,6 +22,7 @@ namespace University
         public void error (string text)
         {
             var result = MessageBox.Show(text );
+            this.Show();
         }
 
         private void Authorization_Load(object sender, EventArgs e)
@@ -32,9 +33,9 @@ namespace University
         private void button1_Click(object sender, EventArgs e)
         {
             Authorization c = new Authorization();
+            this.Hide();
+            c.authorize(textBox1.Text, textBox2.Text);
          
-                c.authorize(textBox1.Text, textBox2.Text);
-     
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

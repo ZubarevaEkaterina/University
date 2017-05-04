@@ -16,7 +16,7 @@ namespace University
             public string[] subject;
             public string[] cabinet;
             public string[] type;
-            public string [] teacher;
+            public Teacher [] teacher;
 
 
 
@@ -40,24 +40,25 @@ namespace University
                 subject = new string[count],
                 cabinet = new string[count],
                 type = new string[count],
-                teacher = new string[count]
+                teacher = new Teacher[count]
 
-            };
 
-            database.QueryExecuteReader("SELECT Lesson.cabinet, Lesson.type, Lesson.Weekday, Subject.subject_name, Lesson.Time, Subject.Teacher_name FROM Subject INNER JOIN Lesson ON Subject.[id] = Lesson.[subject] WHERE Subject.[group] = '" + group + "'");
-            
+        };
            
+            database.QueryExecuteReader("SELECT Lesson.cabinet, Lesson.type, Lesson.Weekday, Subject.subject_name, Lesson.Time, Subject.Teacher_name FROM Subject INNER JOIN Lesson ON Subject.[id] = Lesson.[subject] WHERE Subject.[group] = '" + group + "'");
+      
             int i = 0;
         
             while (database.reader.Read())
             {
-               
-                    lesson.day[i] = database.reader.GetInt32(2);
+                lesson.teacher[i] = new Teacher();
+                lesson.day[i] = database.reader.GetInt32(2);
                     lesson.time[i] = database.reader.GetInt32(4);
                     lesson.subject[i] = database.reader.GetString(3);
                     lesson.cabinet[i] = database.reader.GetString(0);
                     lesson.type[i] = database.reader.GetString(1);
-                    lesson.teacher[i] = database.reader.GetString(5);
+               
+                    lesson.teacher[i].name= database.reader.GetString(5);
                     i++;
                 }
 

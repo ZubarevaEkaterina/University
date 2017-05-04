@@ -11,7 +11,10 @@ namespace University
         private User user;
         
         public void authorize(string login, string password)
-        { string role;
+        {
+            Authorization_form f = new Authorization_form();
+            f.Hide();
+            string role;
 
             user = new User();
            role = user.Get_role(login, password);
@@ -31,8 +34,9 @@ namespace University
                     teach.ShowDialog();
                     break;
                 default:
-                    Authorization_form f = new Authorization_form();
+                   
                     f.error("Неправильное имя или пароль");
+                  
                     break;
                     
 

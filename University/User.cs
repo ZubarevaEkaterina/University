@@ -14,8 +14,6 @@ namespace University
         public string login;
         public string password;
 
-       
-
         public string Get_role(string login, string password)
         {
             this.login = login;

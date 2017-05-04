@@ -93,6 +93,7 @@
     <Compile Include="Student_form.Designer.cs">
       <DependentUpon>Student_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher.cs" />
     <Compile Include="Teacher_form.cs">
       <SubType>Form</SubType>
     </Compile>
