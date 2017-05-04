@@ -26,7 +26,7 @@ namespace University
             database.CloseConnection();
             var schedule = new Schedule()
             {
-                day = new Weekday[8]
+                day = new Weekday[count]
 
 
             };
@@ -38,8 +38,7 @@ namespace University
             while (database.reader.Read())
             {
                schedule.day[i] = new Weekday();
-               // schedule.day[i].lesson = new Lesson();
-                //schedule.day[i].lesson.teacher = new Teacher();
+            
 
                 schedule.day[i].day = database.reader.GetInt32(2);
                 schedule.day[i].lesson.time.time = database.reader.GetInt32(4);
