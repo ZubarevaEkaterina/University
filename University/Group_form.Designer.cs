@@ -1,6 +1,6 @@
 ﻿namespace University
 {
-    partial class Group
+    partial class Group_form
     {
         /// <summary>
         /// Required designer variable.

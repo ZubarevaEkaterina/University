@@ -59,6 +59,7 @@
     <Compile Include="Authorization_form.Designer.cs">
       <DependentUpon>Authorization_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cabinet.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="Create.cs">
       <SubType>Form</SubType>
@@ -67,15 +68,17 @@
       <DependentUpon>Create.cs</DependentUpon>
     </Compile>
     <Compile Include="Database_query.cs" />
-    <Compile Include="Group.cs">
+    <Compile Include="Group.cs" />
+    <Compile Include="Group_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Group.Designer.cs">
-      <DependentUpon>Group.cs</DependentUpon>
+    <Compile Include="Group_form.Designer.cs">
+      <DependentUpon>Group_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Lesson.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schedule.cs" />
     <Compile Include="ScheduleDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,6 +96,7 @@
     <Compile Include="Student_form.Designer.cs">
       <DependentUpon>Student_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Subject.cs" />
     <Compile Include="Teacher.cs" />
     <Compile Include="Teacher_form.cs">
       <SubType>Form</SubType>
@@ -100,7 +104,10 @@
     <Compile Include="Teacher_form.Designer.cs">
       <DependentUpon>Teacher_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Time.cs" />
+    <Compile Include="Type.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="Weekday.cs" />
     <EmbeddedResource Include="Admin_form.resx">
       <DependentUpon>Admin_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,8 +117,8 @@
     <EmbeddedResource Include="Create.resx">
       <DependentUpon>Create.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Group.resx">
-      <DependentUpon>Group.cs</DependentUpon>
+    <EmbeddedResource Include="Group_form.resx">
+      <DependentUpon>Group_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

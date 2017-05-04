@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace University
 {
-   public class Teacher
+    class Time
     {
-        public string name;
-
-
+       public int time;
     }
-    
 }

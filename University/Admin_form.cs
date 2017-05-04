@@ -19,7 +19,7 @@ namespace University
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Group st = new Group();
+            Group_form st = new Group_form();
             st.ShowDialog();
         }
 

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace University
 {
-    public partial class Schedule_form : Form
+     partial class Schedule_form : Form
     {
         public Schedule_form()
         {
@@ -48,14 +48,14 @@ namespace University
 
 
 
-        public void Schedule_form_v(Lesson les, int count)
+        public void Schedule_form_v(Schedule sch, int count)
           {
 
 
             for (int i = 0; i < count; i++)
             {
 
-                dataGridView1.Rows[(les.time[i]) - 1].Cells[les.day[i] - 1].Value = les.subject[i] + ", "  + les.cabinet[i] + ", " + les.teacher[i].name + ", " + les.type[i];
+                dataGridView1.Rows[(sch.day[i].lesson.time.time) - 1].Cells[sch.day[i].day - 1].Value = sch.day[i].lesson.subject.subject + ", "  + sch.day[i].lesson.cabinet.number + ", " + sch.day[i].lesson.teacher.name + ", " + sch.day[i].lesson.type.type;
                 
             }
             

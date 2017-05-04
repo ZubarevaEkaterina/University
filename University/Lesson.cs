@@ -8,70 +8,27 @@ using System.Threading.Tasks;
 
 namespace University
 {
-   public class Lesson
+     class Lesson
     {
-      
-            public int [] day;
-            public int []time;
-            public string[] subject;
-            public string[] cabinet;
-            public string[] type;
-            public Teacher [] teacher;
 
 
+        public Time time;
+        public Subject subject;
+        public Cabinet cabinet;
+        public Type type;
+        public Teacher teacher;
 
-        public void GetLesson(string group)
+
+        public Lesson ()
         {
-           
-            int count = 0;
+            time = new Time();
+            subject = new Subject();
+            cabinet = new Cabinet();
+            type = new Type();
+            teacher = new Teacher();
 
-            Connection database = new Connection();
-            database.QueryExecuteReader("SELECT  Count(*) AS [Count - Lesson] FROM Subject INNER JOIN Lesson ON Subject.[id] = Lesson.[subject] group by Subject.[group] HAVING Subject.[group] = '" + group + "'");
-            while (database.reader.Read())
-            {
-                count = database.reader.GetInt32(0);
-            }
-            database.reader.Close();
-            database.CloseConnection();
-            var lesson = new Lesson()
-            {
-                day = new int[8],
-                time = new int[8],
-                subject = new string[count],
-                cabinet = new string[count],
-                type = new string[count],
-                teacher = new Teacher[count]
-
-
-        };
-           
-            database.QueryExecuteReader("SELECT Lesson.cabinet, Lesson.type, Lesson.Weekday, Subject.subject_name, Lesson.Time, Subject.Teacher_name FROM Subject INNER JOIN Lesson ON Subject.[id] = Lesson.[subject] WHERE Subject.[group] = '" + group + "'");
-      
-            int i = 0;
-        
-            while (database.reader.Read())
-            {
-                lesson.teacher[i] = new Teacher();
-                lesson.day[i] = database.reader.GetInt32(2);
-                    lesson.time[i] = database.reader.GetInt32(4);
-                    lesson.subject[i] = database.reader.GetString(3);
-                    lesson.cabinet[i] = database.reader.GetString(0);
-                    lesson.type[i] = database.reader.GetString(1);
-               
-                    lesson.teacher[i].name= database.reader.GetString(5);
-                    i++;
-                }
-
-            
-
-            database.reader.Close();
-                database.CloseConnection();
-            
-         
-          Schedule_form sc = new Schedule_form();
-           sc.Schedule_form_v(lesson, count);
-           sc.ShowDialog();
-
-            }
         }
-      }                      
+
+    }
+
+}

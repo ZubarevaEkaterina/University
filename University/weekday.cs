@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace University
 {
-    class Group
+    class Weekday
     {
-        public string group_name;
-
-        public void choose_group (string group)
+        public int day;
+        public Lesson lesson;
+        
+        public Weekday()
         {
-
-
+            lesson = new Lesson();
+          
         }
+     
+        
     }
 }
