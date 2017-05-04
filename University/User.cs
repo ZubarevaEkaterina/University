@@ -10,41 +10,22 @@ namespace University
     
     class User
     {
-        public string status;
-        public void Authorize(string login, string password)
-        { 
-            Connection database = new Connection();
-            
-  database.QueryExecuteReader("SELECT User.status from [User] WHERE User.Login = '" + login + "' and User.Password = '" + password + "';");
+        public string role;
+        public string login;
+        public string password;
 
-            while (database.reader.Read())
-            {
-                status = database.reader.GetString(0);
-            }
+       
 
-            database.reader.Close();
-           database.CloseConnection();
-           
-                switch (status)
-                {
-                    case "Админ":
-                        Admin_form adm = new Admin_form();
-                        adm.ShowDialog();
-                        break;
-                    case "Студент":
-                        Student_form st = new Student_form();
-                        st.ShowDialog();
-                        break;
-                    case "Учитель":
-                        Teacher_form teach = new Teacher_form();
-                        teach.ShowDialog();
-                        break;
-                    default:
-                        throw new ArgumentException("Error");
-                        
-                }
-            
-         
+        public string Get_role(string login, string password)
+        {
+            this.login = login;
+            this.password = password;
+            Database_query q = new Database_query();
+
+            role = q.select_command("User", "User.status", "WHERE User.Login = '" + login + "' and User.Password = '" + password + "'");
+
+            return role;
+
         }
 
     }

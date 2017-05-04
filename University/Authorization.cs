@@ -1,58 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace University
 {
-    public partial class Authorization : Form
+    class Authorization
     {
-        private string login;
-        private string password;
+        private User user;
+        
+        public void authorize(string login, string password)
+        { string role;
 
-        public Authorization()
-        {
-            InitializeComponent();
+            user = new User();
+           role = user.Get_role(login, password);
+           
+            switch (role)
+            {
+                case "Админ":
+                    Admin_form adm = new Admin_form();
+                    adm.ShowDialog();
+                    break;
+                case "Студент":
+                    Student_form st = new Student_form();
+                    st.ShowDialog();
+                    break;
+                case "Учитель":
+                    Teacher_form teach = new Teacher_form();
+                    teach.ShowDialog();
+                    break;
+                default:
+                    Authorization_form f = new Authorization_form();
+                    f.error("Неправильное имя или пароль");
+                    break;
+                    
+
+            }
+
+
         }
-
-        private void Authorization_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            User check = new User();
-           try
-           {
-                check.Authorize(login, password);
-            
-             }
-            catch (Exception)
-           {
-
-             var result = MessageBox.Show("Неправильное имя или пароль", "", MessageBoxButtons.OK);
-                 return;
-             }
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-            login = textBox1.Text;
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            password = textBox2.Text;
-        }
-
-       
     }
 }
