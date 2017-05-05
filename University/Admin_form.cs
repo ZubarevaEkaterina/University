@@ -21,7 +21,7 @@ namespace University
         {
             Group_form st = new Group_form();
             st.ShowDialog();
-            st.show_sch();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

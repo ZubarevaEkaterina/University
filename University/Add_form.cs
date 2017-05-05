@@ -20,7 +20,13 @@ namespace University
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
+            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Add_lesson add = new Add_lesson();
+            add.Create_les(Convert.ToInt32(textBox3.Text),textBox1.Text, Convert.ToInt32(textBox4.Text), textBox5.Text, textBox2.Text, textBox6.Text);
         }
     }
 }

@@ -16,8 +16,6 @@ namespace University
         {
             InitializeComponent();
 
-           
-
             Connection database = new Connection();
             database.QueryExecuteReader("SELECT Group.[Group_name] FROM[Group];");
             while (database.reader.Read())
@@ -36,22 +34,11 @@ namespace University
         {
            
          Schedule sch = new Schedule();
-            sch.GetSchedule(comboBox1.Text);
+         sch.GetSchedule(comboBox1.Text);
         }
 
-        public void show_sch()
-        {
-            Schedule sch = new Schedule();
-            sch.GetSchedule(comboBox1.Text);
-        }
+        
 
-        public void create_new()
-        {
-            Add_form sch = new Add_form();
-            sch.Show();
-            Add_lesson les = new Add_lesson();
-            les.Create_les(comboBox1.Text);
-        }
 
     }
        

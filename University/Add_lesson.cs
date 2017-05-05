@@ -9,32 +9,43 @@ namespace University
     class Add_lesson
     {
         public Weekday day;
-        public void Create_les(string group)
-        {
+        public Group gr;
+       // public void Create_les(string group)
+        /*{
             var Add_Lesson = new Add_lesson()
             {
                 day = new Weekday()
 
-            };
+            };*/
             Connection database = new Connection();
             //  database.QueryExecuteReader("SELECT Lesson.cabinet, Lesson.type, Lesson.Weekday, Subject.subject_name, Lesson.Time, Subject.Teacher_name FROM Subject INNER JOIN Lesson ON Subject.[id] = Lesson.[subject] WHERE Subject.[group] = '" + group + "'");
 
 
 
-        }
+      //  }
 
-        public void box_day(int day1, string subject, int time, string cabinet, string teacher, string type)
-        {
-            day = new Weekday();
+        public void Create_les(int day, string subject, int time, string cabinet, string type, string group)
+        {/*
 
+            var Add_Lesson = new Add_lesson()
+            {
+                day = new Weekday(),
+                gr = new Group()
+
+            };
 
             Add_Lesson.day.day = day1;
-            day.lesson.time.time = time;
-            day.lesson.subject.subject = subject;
-            day.lesson.cabinet.number = cabinet;
-            day.lesson.type.type = type;
-            day.lesson.teacher.name = teacher;
+            Add_Lesson.day.lesson.time.time = time;
+            Add_Lesson.day.lesson.subject.subject = subject;
+            Add_Lesson.day.lesson.cabinet.number = cabinet;
+            Add_Lesson.day.lesson.type.type = type;
+            Add_Lesson.gr.name = group;*/
 
+            Connection database = new Connection();
+            database.QueryExecuteNon("INSERT INTO [Lesson] (cabinet, type, weekday, subject, time )VALUES('" + cabinet + "', '" + type + "', '" + day + "', '" + subject + "', '" + time+"');");
+            database.CloseConnection();
+
+            
         }
     }
 }

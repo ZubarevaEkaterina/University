@@ -71,7 +71,7 @@ namespace University
 
         private void Добавить_Click(object sender, EventArgs e)
         {
-           Group_form add = new Group_form();
+           Add_form add = new Add_form();
             add.Show();
         }
     }
