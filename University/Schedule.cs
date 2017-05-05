@@ -56,6 +56,7 @@ namespace University
 
 
             Schedule_form sc = new Schedule_form();
+            sc.Hide();
             sc.Schedule_form_v(schedule, count, group);
             sc.ShowDialog();
         } } }

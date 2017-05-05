@@ -29,7 +29,6 @@ namespace University
             Add_form add = new Add_form();
             add.Message("Событие создано");
             Schedule sc = new Schedule();
-
             sc.GetSchedule(group);
         }
     }

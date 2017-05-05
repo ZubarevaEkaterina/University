@@ -54,7 +54,7 @@
             // 
             // Добавить
             // 
-            this.Добавить.Location = new System.Drawing.Point(91, 417);
+            this.Добавить.Location = new System.Drawing.Point(176, 15);
             this.Добавить.Name = "Добавить";
             this.Добавить.Size = new System.Drawing.Size(75, 23);
             this.Добавить.TabIndex = 2;
