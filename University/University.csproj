@@ -92,7 +92,6 @@
     </Compile>
     <Compile Include="Create_user.cs" />
     <Compile Include="Database_query.cs" />
-    <Compile Include="Group.cs" />
     <Compile Include="Group_form.cs">
       <SubType>Form</SubType>
     </Compile>
